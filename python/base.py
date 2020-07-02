@@ -79,8 +79,82 @@ class User():
         print(cls(name))
 User.f('user')
 
+# 执行字符串表示的代码
+s = "print('hello world')"
+r = compile(s, "<string>", "exec")
+exec(r)
 
+# 创建复数
+print(complex(1, 2))
 
+# 动态删除对象属性
+delattr(tea, 'name')
+print(hasattr(tea, 'name'))
+
+# 转为字典
+dict1 = dict(a='a', b='2')
+dict2 = dict([('a',3), ('b', 5)])
+print(dict1)
+print(dict2)
+
+# 查看对象所有方法
+print(dir(stu))
+
+# 取商和余数
+print(divmod(10,3))
+
+# 枚举对象
+s = ['a', 'b', 'c']
+for i, v in enumerate(s, 1):
+    print(i, v)
+
+# 计算表达式:
+s = "1+2+3"
+print(eval(s))
+
+# 查看变量所占字节数
+import sys
+print(sys.getsizeof(s))
+
+# 过滤器
+fil = filter(lambda a: a > 10, [1,10,2,9,11,15])
+print(list(fil))
+
+# 整数转成浮点数
+print(float(3))
+
+# 字符串格式化
+print("i am {0}, arg2 is {1}".format("sam", 110))
+
+# 创建不可修改的set
+print(frozenset([1,2,1,3,4,3]))
+
+# 返回对象的hash值
+print(hash(tea))
+
+# 帮助文档
+# print(help(tea))
+
+# 获取用户输入
+# input()
+
+# 读取文件
+'''
+fo = open(path, mode, encoding)
+fo.read()
+mode 取值范围
+'r'	读取（默认）
+'w'	写入，并先截断文件
+'x'	排它性创建，如果文件已存在则失败
+'a'	写入，如果文件存在则在末尾追加
+'b'	二进制模式
+'t'	文本模式（默认）
+'+'	打开用于更新（读取与写入）
+'''
+
+# 次幂
+print(pow(2,3))
+print(pow(2,3,5))   #取余
 
 
 
