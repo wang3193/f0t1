@@ -156,5 +156,55 @@ mode 取值范围
 print(pow(2,3))
 print(pow(2,3,5))   #取余
 
+# 返回对象内存地址
+print(id(stu))
 
+# 反向迭代器
+rev = reversed([1,2,3,4,5])
+for i in rev:
+    print(i)
+
+# 四舍五入
+print(round(3.1415926, 2))
+
+# 转化为集合
+a = [1,2,2,3,4,3,5]
+print(set(a))
+
+# 切片对象
+a = [1,2,3,4,5,6,7,8,9,1,2,3,4,5]
+my_slice = slice(0, 9, 3)  #slice(start, end, step)
+print(a[my_slice])
+
+# 排序函数
+print(sorted(a, reverse=True)) # sorted(array, key, reverse)
+
+# 求和函数
+print(sum(a))
+
+# 转元祖
+print(tuple(a))
+
+# 查看对象类型
+print(type([1,2,3]))
+
+# 动态方法
+from operator import *
+
+def calc(a, b, op): 
+    return {
+        '+': add,
+        '-': sub,
+        '*': mul,
+        '**': pow,
+        '/': truediv
+    }[op](a,b)
+
+print(calc(1,2,'+'))
+
+# swap
+a = 2
+b = 3
+a,b = b,a
+print("a:",a, "b:", b)
 
